@@ -101,7 +101,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url("images/_iphone_family__fuz5j2v5xx6y_medium.jpg");
+  background-image: url("images/iphone family.jpg");
   font-size: x-large;
 }
 
@@ -286,11 +286,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  text-align: center;
   gap: 10px;
-  padding-bottom: 130px;
+  padding-bottom: 60px;
   font-size: x-large;
 }
 
+/* 👇 ye button ka CSS bhi add karo */
 .button8 {
   border: 2px solid rgba(0, 113, 227);
   border-radius: 50px;
@@ -298,6 +300,13 @@
   background-color: rgba(0, 113, 227);
   color: white;
   margin-right: 10px;
+  transition: 0.3s;
+}
+
+.button8:hover {
+  background-color: white;
+  color: rgba(0, 113, 227);
+  cursor: pointer;
 }
 
 /* ===============================
@@ -342,119 +351,154 @@
 
 /* 0px – 786px (Mobile screens) */
 @media (max-width: 786px) {
-  #section1 {
-    padding: 60px !important;
-    background-size: cover !important;
-    background-position: center center !important;
-  }
 
-  #section1 {
-    height: 800px !important; /* ✅ Full height on mobile too */
-  }
-
-  #section3 {
-     padding-top: 600px !important;
-    background-size: cover !important;
-    background-position: center center !important;
-  }
-  #section4 {
-    padding-top: 50px !important;
-    background-size: cover !important;
-    background-position:  center !important;
-    width: 800px;
-  }
-
-  #Section7 {
-    flex-direction: column;
-    height: auto;
-    gap: 20px;
-  }
-
-  #Section8 {
-    width: 100%;
-    height: 700px;
-    padding-bottom: 450px;
-    background-size: cover;
-  }
-
-  #Section9 {
-    width: 100%;
-    height: 700px;
-    padding-bottom: 50px;
-  }
-}
-
-
-
-
-@media (max-width: 576px) {
-  #section1 {
-    padding: 60px !important;
-    background-size: cover !important;
-    background-position: center center !important;
-  }
-
-  #section1 {
-    height: 800px !important; /* ✅ Full height on mobile too */
-  }
-
-  #section3 {
-     padding-top: 600px !important;
-    background-size: cover !important;
-    background-position: center center !important;
-  }
-
-  #section4 {
-    padding-top: 50px !important;
-    background-size: cover !important;
-    background-position:  center !important;
+  html, body {
+    overflow-x: hidden !important;
     width: 100% !important;
-    height: 900px;
   }
 
+  * {
+    box-sizing: border-box;
+    max-width: 100% !important;
+  }
+
+  /* 🌐 Navbar Mobile Layout */
+  .navbar {
+    padding: 10px 15px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .navbar-brand img {
+    height: 28px;
+  }
+
+  /* 🍎 iPhone Section */
+  #section1 {
+    width: 100% !important;
+    height: auto !important;
+    padding: 100px 20px 80px 20px !important;
+    text-align: center;
+    background-position: center !important;
+    background-size: cover !important;
+  }
+
+  #section1 h1 {
+    font-size: 45px !important;
+  }
+
+  #section1 h3 {
+    font-size: 20px !important;
+  }
+
+  .button1, .button2 {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
+  /* 💝 Mother’s Day Section */
+  #section3 {
+    width: 100% !important;
+    height: auto !important;
+    padding: 120px 20px 80px 20px !important;
+    text-align: center;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  #section3 h1 {
+    font-size: 36px;
+  }
+
+  #section3 h3 {
+    font-size: 18px;
+  }
+
+  #button3 {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  /* 💻 MacBook Section */
+  #section4 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    padding: 120px 20px 100px 20px !important;
+    text-align: center;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  #section4 h1 {
+    font-size: 40px !important;
+  }
+
+  #section4 h5 {
+    font-size: 16px !important;
+  }
+
+  #button4, #button5 {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+
+  /* ⌚ Watch + Business Section */
   #Section7 {
     flex-direction: column;
-    height: auto;
-    gap: 20px;
-    width: 400px;
+    gap: 30px;
+    width: 100% !important;
+    height: auto !important;
   }
 
-  #Section8 {
-    width: 600px;
-    height: 700px;
-    padding-bottom: 450px;
-    background-size: cover;
+  #Section8, #Section9 {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 500px !important;
+    background-size: cover !important;
+    background-position: center !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 290px !important;
   }
 
-  #Section9 {
-    width: 600px;
-    height: 700px;
-    padding-bottom: 50px;
+  #Section8 h3, #Section9 h1, #Section9 h2 {
+    color: white !important;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    
   }
+
+/* ✅ FINAL MOBILE SECTION 9 FIX */
+#Section9 {
+  width: 100% !important;
+  height: 500px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-end !important; /* 👈 yahan se bottom pe aayega */
+  align-items: center !important;
+  text-align: center !important;
+  background-size: cover !important;
+  background-position: center !important;
+  padding-bottom: 40px !important; /* 👈 bottom se spacing */
+}
+
+#Section9 h1, 
+#Section9 h2 {
+  color: white !important;
+  text-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+.button8 {
+  padding: 8px 18px !important;
+  font-size: 14px !important;
 }
 
 
-
-
-.section-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;          /* wrapper full */
 }
-
-#section4 {
-  width: 1400px;
-  max-width: 100%;
-  background-image: url(images/hero_macbook_air_avail__fpm99qgohx2e_medium.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 790px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-
-
